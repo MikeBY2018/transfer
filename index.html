@@ -20,7 +20,7 @@
                 <a href="tel:+375333333333">+375(33)333-33-33</a>
                 <b>Заказать звонок</b>            
             </div>
-            <button>Войти</button>
+            <button class="btn btn_nav">Войти</button>
         </div>
     </header>
     <main>
@@ -31,9 +31,9 @@
                     <em>Обгоняем время</em>
                 </div>
                 <div class="filter_details">
-                    <input type="checkbox" id="transfer" value="transfer">
+                    <input type="checkbox" id="transfer" value="transfer" name="options">
                     <label for="transfer">Трансфер</label>
-                    <input type="checkbox" id="with_driver">
+                    <input type="checkbox" id="driver" value="driver" name="options">
                     <label for="with_driver">Аренда с водителем</label>
                     <label>Откуда<input type="text"></label>
                     <label>Куда<input type="text"></label>
@@ -68,10 +68,139 @@
             </div>
         </div>
         <div class="our_cars">
-            <h2 class="lines">Наши автомобили</h2>
+                <div class="wrapper">
+                    <h2 class="lines">Наши автомобили</h2>
+                    <div class="cars_select">
+                            <div>
+                                <span>Выбрать автомобиль</span>
+                                <div class="tab">
+                                        <button class="tablinks">Стандарт</button>
+                                        <button class="tablinks">Бизнес</button>
+                                </div>
+                            </div>    
+                            <div id="standart" class="tabcontent">
+                                <div class="tabcontent_comments">
+                                    <p>Мы используем Volvo - автомобили, обладающие интеллектом</p>
+                                    <p>Признанная во всем мире безопасность от Volvo</p>
+                                    <p>Комфорт и удобство в пути высокого уровня</p>
+                                </div>
+                                <div class="slider_volvo"></div>
+                            </div>
+                            <div id="business" class="tabcontent">
+                                <div class="tabcontent_comments">
+                                        <p>Мы используем ВАЗ - автомобили, пропитанные духом отечества</p>
+                                        <p>Признанная во всем мире бюджетность автомобиля</p>
+                                        <p>Комфорт и удобство в пути среднего уровня</p>
+                                </div>
+                                <div class="slider_vaz"></div>                                
+                            </div>
+                    </div>
+                    <button class="btn btn_order">Сделать заказ</button>
+                </div>
         </div>
         <div class="tariffs">
             <h2 class="lines">Тарифы</h2>
+            <div class="tariffs">
+                <table border="1">
+                        <caption>Трансфер</caption>             
+                        <tr>
+                            <td>Вместимость</td>
+                            <td>3 пассажира</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальное время заказа и срок аннуляции заказа без штрафа</td>
+                            <td>2 часа</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Трансфер</th>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;Аэропорт-Центр города&#x00BB;</td>
+                            <td>35 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;Железнодорожный вокзал - город&#x00BB;</td>
+                            <td>20 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;С адреса на адрес в черте города&#x00BB;</td>
+                            <td>20 руб.</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Аренда автомобиля</th>
+                        </tr>
+                        <tr>
+                            <td>1 час аренды автомобиля с водителем</td>
+                            <td>25 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальный заказ ТС в аренду</td>
+                            <td>2 часа</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальная стоимость заказа по межгороду</td>
+                            <td>30 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>1 км по межгороду</td>
+                            <td>0,8 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Стоимость подачи при заказе межгорода</td>
+                            <td>8 руб.</td>
+                        </tr>
+                </table>
+                <table border="1">
+                        <caption>Аренда автомобиля с водителем</caption>             
+                        <tr>
+                            <td>Вместимость</td>
+                            <td>3 пассажира</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальное время заказа и срок аннуляции заказа без штрафа</td>
+                            <td>2 часа</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Трансфер</th>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;Аэропорт-Центр города&#x00BB;</td>
+                            <td>35 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;Железнодорожный вокзал - город&#x00BB;</td>
+                            <td>20 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Трансфер &#x00AB;С адреса на адрес в черте города&#x00BB;</td>
+                            <td>20 руб.</td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">Аренда автомобиля</th>
+                        </tr>
+                        <tr>
+                            <td>1 час аренды автомобиля с водителем</td>
+                            <td>25 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальный заказ ТС в аренду</td>
+                            <td>2 часа</td>
+                        </tr>
+                        <tr>
+                            <td>Минимальная стоимость заказа по межгороду</td>
+                            <td>30 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>1 км по межгороду</td>
+                            <td>0,8 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Стоимость подачи при заказе межгорода</td>
+                            <td>8 руб.</td>
+                        </tr>
+                </table>
+                <button class="btn btn_order">Сделать заказ</button>
+            </div>
         </div>
     </main>
 </body>
