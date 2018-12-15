@@ -1,7 +1,12 @@
+@import url('fonts.css');
 @import url('normalize.css');
 
+
+
+/*Настройка страницы*/
 body{
     background-color: #cfc;
+    font: 20px ProximaNovaSb, Arial, sans-serif;
 }
 
 ul{
@@ -14,4 +19,98 @@ ul{
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: #212931;
+}
+header, footer{
+    background-color: #fff;
+    padding: 10px 0;
+    color: #212931; 
+    text-transform: uppercase; 
+}
+
+/*настройка кнопки cбрасываем стили браузера и устанавливаем свои*/
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    
+    background-color: #f87f01;
+    border: none;
+    color: #212931;
+    
+    font: 25px ProximaNovaSb, Arial, sans-serif;
+    text-transform: uppercase;    
+    text-align: center;
+    text-decoration: none;
+    /* создаём маленькие отступы, если кнопки перенесутся на две строки */
+    margin: 2px 0;
+    /* невидимая граница (понадобится для цвета при наведении/фокусе) */
+    border: solid 1px transparent;
+    /* размер строится из текста и отступов (без width/height) */
+    padding: 0.3em 3em;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+ }
+
+    /* инвертируем цвета при наведении */
+.btn:hover,{
+    color: #f87f01;
+    border-color: currentColor;
+    background-color: white;
+ }
+    /* убеждаемся, что есть видимые границы при фокусе */
+.btn:focus {
+    outline: none;
+ }
+/*Элементы*/
+
+header nav, .calling{
+    float: left;
+    margin-top: 10px;
+}
+.calling{
+    position: relative;
+}
+.calling a::before{
+    content: "";
+    display: inline-block;
+    position: absolute;
+    height: 30px;
+    width: 35px;
+    top: -4px;
+    left: -40px;
+    background-image: url('../img/hours24.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.calling b{
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+header nav{
+    margin-right: 5%;
+}
+.btn_nav{
+    float: right;  
+    margin-top: 7px;  
+    font: 20px ProximaNova, Arial, sans-serif;  
+}
+header nav li{
+    display: inline-block;
+    margin-right: 40px;
+}
+nav a{
+    
 }
