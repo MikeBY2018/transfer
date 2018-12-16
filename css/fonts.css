@@ -31,3 +31,7 @@
     font-family: UbuntuBd;
     src: url('../fonts/ubuntu-bold.woff');
 }
+@font-face{
+    font-family: Ubuntu;
+    src: url('../fonts/ubuntu-regular.woff');
+}

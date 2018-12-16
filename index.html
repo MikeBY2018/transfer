@@ -69,18 +69,18 @@
         </div>
         <div class="servises">
             <div class="wrapper">
-                <h2 class="lines">Преимущества интеллектуального сервиса</h2>
+                <h2><span class="lines">Преимущества интеллектуального сервиса</span></h2>
                 <div class="servises_list">
                     <div class="servises_list_item">
-                        <h2>Водители с высшим образованием</h2>
+                        <h3>Водители с высшим образованием</h3>
                         <p>Водитель умеет создать атмосферу поездки</p>
                     </div>
                     <div class="servises_list_item">
-                        <h2>Автомобили с интеллектом</h2>
+                        <h3>Автомобили с интеллектом</h3>
                         <p>Водитель умеет создать атмосферу поездки</p>
                     </div>
                     <div class="servises_list_item">
-                        <h2>Информационное соповождение</h2>
+                        <h3>Информационное сопровождение</h3>
                         <p>Водитель умеет создать атмосферу поездки</p>
                     </div>
                 </div>
@@ -88,28 +88,29 @@
         </div>
         <div class="our_cars">
                 <div class="wrapper">
-                    <h2 class="lines">Наши автомобили</h2>
+                    <h2 class="absolute"><span class="lines">Наши автомобили</span></h2>
                     <div class="cars_select">
                             <div>
                                 <span>Выбрать автомобиль</span>
                                 <div class="tab">
-                                        <button class="tablinks">Стандарт</button>
-                                        <button class="tablinks">Бизнес</button>
+                                    <button class="tablinks" onclick="openCity(event, 'standart')">Стандарт</button>
+                                    <button class="tablinks"  onclick="openCity(event, 'business')">Бизнес</button>
                                 </div>
                             </div>    
                             <div id="standart" class="tabcontent">
                                 <div class="tabcontent_comments">
-                                    <p>Мы используем Volvo - автомобили, обладающие интеллектом</p>
-                                    <p>Признанная во всем мире безопасность от Volvo</p>
-                                    <p>Комфорт и удобство в пути высокого уровня</p>
+                                    <p>Мы используем ВАЗ - автомобили, пропитанные духом отечества</p>
+                                    <p>Признанная во всем мире бюджетность автомобиля</p>
+                                    <p>Комфорт и удобство в пути среднего уровня</p>
+                                    
                                 </div>
                                 <div class="slider_volvo"></div>
                             </div>
                             <div id="business" class="tabcontent">
                                 <div class="tabcontent_comments">
-                                        <p>Мы используем ВАЗ - автомобили, пропитанные духом отечества</p>
-                                        <p>Признанная во всем мире бюджетность автомобиля</p>
-                                        <p>Комфорт и удобство в пути среднего уровня</p>
+                                    <p>Мы используем Volvo - автомобили, обладающие интеллектом</p>
+                                    <p>Признанная во всем мире безопасность от Volvo</p>
+                                    <p>Комфорт и удобство в пути высокого уровня</p>     
                                 </div>
                                 <div class="slider_vaz"></div>                                
                             </div>
@@ -119,7 +120,7 @@
         </div>
         <div class="tariffs">
             <div class="wrapper">
-                <h2 class="lines">Тарифы</h2>
+                <h2><span class="lines">Тарифы</span></h2>
                 <div class="tariffs">
                     <table border="1">
                             <caption>Трансфер</caption>             
@@ -225,7 +226,7 @@
         </div>
         <div class="passenger_care">
             <div class="wrapper">
-                <h2 class="lines">Заботимся о пассажирах</h2>
+                <h2><span class="lines">Заботимся о пассажирах</span></h2>
                 <div class="passenger_care_img"></div>
                 <div class="passenger_care_img">
                     <p>Встретим, поможем с багажом, решим вопросы, возникающие по пути следования.</p>
@@ -234,7 +235,7 @@
         </div>
         <div class="your_time">
             <div class="wrapper">
-                <h2 class="lines">Ценим Ваше время</h2>
+                <h2><span class="lines">Ценим Ваше время</span></h2>
                 <div class="width_inherit">
                     <p>Прибудем точно в срок. Предложим оптимальный маршрут. С нами Вы успеете сделать больше.</p>
                 </div>
@@ -242,7 +243,7 @@
         </div>
         <div class="comfort">
             <div class="wrapper">
-                <h2 class="lines">Комфорт в пути для работы и отдыха</h2>
+                <h2><span class="lines">Комфорт в пути для работы и отдыха</span></h2>
                 <div class="width_inherit">
                     <p>Wi-Fi, зарядное устройство, вода, зонт, подушка и плед для длительных поездок. Тактичный водитель.</p>
                 </div>
@@ -250,7 +251,7 @@
         </div>
         <div class="safety">
             <div class="wrapper">
-                <h2 class="lines">Надежность, техничность, безопасность</h2>
+                <h2><span class="lines">Надежность, техничность, безопасность</span></h2>
                 <div class="width_inherit">
                     <p>Признанная безопасность от Volvo: все автомобили оснащены электронными системами безопасности city safety</p>
                 </div>
@@ -266,8 +267,7 @@
     </main>
     <footer>
         <strong class="notes">Мы формируем новую культуру перемещения</strong>
-        <div class="wrapper">
-            
+        <div class="wrapper">            
             <section>
                 <div class="info">
                     <div class="site_logo"> 
@@ -297,5 +297,6 @@
             </div>
         </div>
     </footer>
+    <script src="script/main.js"></script>
 </body>
 </html>
