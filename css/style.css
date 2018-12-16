@@ -306,7 +306,7 @@ h3{
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: -84px;
+    top: -70px;
     text-align: center;
     z-index: 1;
 }
@@ -545,7 +545,38 @@ h3{
 }
 
 
-
+.passenger_care{
+    background-color: #465359;
+    position: relative;
+    padding: 80px 0;
+}
+.passenger_img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 49%;
+    min-height: 485px;
+}
+.passenger_img.one{
+    background-image: url("../img/photo_doorscar.jpg");
+    float: left;
+}
+.passenger_img.two{
+    background-image: url("../img/photo_kids.jpg");
+    float: right;
+    position: relative;
+}
+.sign{
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 15px;
+    right: 15px;
+    margin: 0;
+    max-width: 375px;
+    background-color: #f87f01;
+    padding: 25px 15px;
+    font-size: 21px;
+}
 @media screen and (max-width: 550px){
     .tariffs table{
         width: 100%;
@@ -557,4 +588,11 @@ h3{
     .tariffs table+table{
         float: none;
     }
+    .passenger_img{
+        width: 100%;
+    }
+    .passenger_img.one{
+        margin-bottom: 20px;
+    }
 }
+
