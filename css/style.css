@@ -3,6 +3,7 @@
 
 
 
+
 /*Настройка страницы*/
 body{
     background-color: #cfc;
@@ -113,4 +114,148 @@ header nav li{
 }
 nav a{
     
+}
+
+/*main*/
+.filter{
+    background-color: #fbfbfb;
+    padding-top: 5px;
+    
+}
+.site_logo{
+    float: left;
+    text-align: center;
+    margin-right: 10%;
+    margin-bottom: -12px;
+}
+.site_logo em{
+    display: block;
+    text-transform: none;
+    font: italic 20px BascervI, Arial, sans-serif;
+    position: relative;
+    top: -15px;
+}
+.filter_details{
+    float: left;
+    font-size: 26px;
+
+}
+.filter_details>div{
+    float: left;
+}
+.filter_details label{
+    display: block;
+}
+.rent{
+    margin-right: 100px;    
+    padding: 15px 0;
+}
+.place{
+    padding: 15px 0;
+}
+.check_tr{
+    margin-bottom: 18px;
+}
+.place label{
+    text-align: right;
+}
+.place label:first-child{
+    margin-bottom: 15px;
+}
+/*настройка checkbox*/
+input[type="checkbox"]{
+    display: none;
+}
+input[type="text"]{
+    width: 225px;
+    font-size: 24px;
+}
+.check {
+    cursor: pointer;
+    position: relative;
+    margin: auto;   
+    -webkit-tap-highlight-color: transparent;
+    transform: translate3d(0, 0, 0);
+}
+.check:before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(34,50,84,0.03);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+.check svg {
+    position: relative;
+    top: 4px;
+    z-index: 1;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #c8ccd4;
+    stroke-width: 1.5;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.2s ease;
+}
+.check svg path {
+    stroke-dasharray: 60;
+    stroke-dashoffset: 0;
+}
+.check svg polyline {
+    stroke-dasharray: 22;
+    stroke-dashoffset: 66;
+}
+.check:hover:before {
+    opacity: 1;
+}
+.check:hover svg {
+    stroke: #f87f01;
+}
+.mark:checked + .check svg {
+    stroke: #f87f01;
+}
+.mark:checked + .check svg path {
+    stroke-dashoffset: 60;
+    transition: all 0.3s linear;
+}
+.mark:checked + .check svg polyline {
+    stroke-dashoffset: 42;
+    transition: all 0.2s linear;
+    transition-delay: 0.15s;
+}
+
+/*intellectual_transfer*/
+.intellectual_transfer{
+    background-image: url("../img/bg_sity.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-transform: uppercase; 
+}
+h1{
+    font: bold 32px UbuntuBd, Arial, sans-serif;
+    margin: 0;    
+    color: #f4f4f4;
+    background-color: rgba(30, 39, 54, 0.65);    
+    padding: 16px 0;
+}
+.itrb{
+    background-image: url("../img/parking_cars.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 615px;
+}
+.notes{
+    text-align: center;
+    display: block;
+    background-color: #f87f01;
+    color: #202020;
+    font: bold 32px UbuntuBd, Arial, sans-serif;
+    padding: 13px 0;
 }

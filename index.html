@@ -26,28 +26,46 @@
     </header>
     <main>
         <div class="filter">
-            <div class="wrapper">
+            <div class="wrapper clearfix">
                 <div class="site_logo"> 
                     <a href=""><img src="img/logo.png" alt="RG"></a>
                     <em>Обгоняем время</em>
                 </div>
-                <div class="filter_details">
-                    <input type="checkbox" id="transfer" value="transfer" name="options">
-                    <label for="transfer">Трансфер</label>
-                    <input type="checkbox" id="driver" value="driver" name="options">
-                    <label for="with_driver">Аренда с водителем</label>
-                    <label>Откуда<input type="text"></label>
-                    <label>Куда<input type="text"></label>
+                <div class="filter_details clearfix">
+                    <div class="rent">
+                        <div class="check_tr">
+                            <input type="checkbox" id="transfer" class="mark" value="transfer" name="options">
+                            <label for="transfer" class="check">
+                                <svg width="24px" height="24px" viewBox="0 0 18 18">
+                                    <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>&nbsp; Трансфер                            
+                            </label> 
+                        </div>
+                        <div class="check_dr">
+                            <input type="checkbox" id="driver" class="mark" value="driver" name="options">
+                            <label for="driver" class="check">
+                                <svg width="24px" height="24px" viewBox="0 0 18 18">
+                                    <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>&nbsp; Аренда с водителем
+                            </label>  
+                        </div>                        
+                    </div>
+                    <div class="place">
+                        <label>Откуда&nbsp; <input type="text"></label>
+                        <label>Куда&nbsp; <input type="text"></label>
+                    </div>
                 </div>
             </div>   
         </div>
         <div class="intellectual_transfer">
             <div class="wrapper">
-                <div>
+                <div class="itrb">
                     <h1>Интеллектуальный трансфер в любую точку Беларуси</h1>
-                </div>
-                <strong class="notes">Ваше путешествие начинается здесь</strong>
-            </div>            
+                </div>                
+            </div>
+            <strong class="notes">Ваше путешествие начинается здесь</strong>            
         </div>
         <div class="servises">
             <div class="wrapper">
@@ -213,6 +231,7 @@
                     <p>Встретим, поможем с багажом, решим вопросы, возникающие по пути следования.</p>
                 </div>
             </div>
+        </div>
         <div class="your_time">
             <div class="wrapper">
                 <h2 class="lines">Ценим Ваше время</h2>
@@ -246,8 +265,9 @@
         </div>
     </main>
     <footer>
+        <strong class="notes">Мы формируем новую культуру перемещения</strong>
         <div class="wrapper">
-            <strong class="notes">Мы формируем новую культуру перемещения</strong>
+            
             <section>
                 <div class="info">
                     <div class="site_logo"> 

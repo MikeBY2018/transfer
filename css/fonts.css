@@ -25,5 +25,9 @@
 }
 @font-face{
     font-family: BascervI;
-    src: url('../fonts/BASKERV1.ttf');
+    src: url('../fonts/baskerville_az_ps-normal-italic.ttf');
+}
+@font-face{
+    font-family: UbuntuBd;
+    src: url('../fonts/ubuntu-bold.woff');
 }
