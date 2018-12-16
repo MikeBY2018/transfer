@@ -41,7 +41,14 @@ header, footer{
     color: #212931; 
     text-transform: uppercase; 
 }
-
+.white{
+    background-color: #fff;
+    overflow: hidden;
+}
+.gray{
+    background-color: #465359;
+    position: relative;
+}
 /*настройка кнопки cбрасываем стили браузера и устанавливаем свои*/
 .btn{
     cursor: pointer;
@@ -306,13 +313,12 @@ h3{
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: -70px;
+    top: -78px;
     text-align: center;
     z-index: 1;
 }
 .servises{
-    background-color: #fff;
-    overflow: hidden;
+
 }
 .servises_list{
     display: flex;
@@ -343,8 +349,6 @@ h3{
     text-align: left;
 }
 .our_cars{
-    background-color: #465359;
-    position: relative;
     padding: 58px 0 27px;    
 }
 .select{
@@ -510,8 +514,6 @@ h3{
 
 
 .tariffs{
-    background-color: #fff;
-    overflow: hidden;
     padding-bottom: 138px;
     
 }
@@ -545,9 +547,7 @@ h3{
 }
 
 
-.passenger_care{
-    background-color: #465359;
-    position: relative;
+.passenger_care{    
     padding: 80px 0;
 }
 .passenger_img{
@@ -577,6 +577,38 @@ h3{
     padding: 25px 15px;
     font-size: 21px;
 }
+.width_inherit{
+    width: 100%;
+    min-height: 669px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.your_time{
+    background-image: url("../img/photo_clooks.jpg");
+    margin-bottom: 118px;
+}
+.comfort{
+    background-image: url("../img/photo_man_in_car.jpg");
+}
+.safety{
+    background-image: url("../img/photo_gadget.jpg");
+    margin-bottom: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 550px){
     .tariffs table{
         width: 100%;
