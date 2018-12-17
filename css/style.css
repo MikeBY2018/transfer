@@ -37,11 +37,13 @@ a{
 .center{
     text-align: center;
 }
-header, footer{
-    background-color: #fff;
+header{
+    text-transform: uppercase;
     padding: 10px 0;
-    color: #212931; 
-    text-transform: uppercase; 
+}
+header, footer{
+    background-color: #fff;    
+    color: #212931;     
 }
 .white{
     background-color: #fff;
@@ -602,7 +604,7 @@ h3{
     color: #d2d7da;
     font: 16px ProximaNovaLt, Arial, sans-serif;
     margin-top: 130px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 .reviews_slider p{
     margin-top: 0;
@@ -656,6 +658,7 @@ footer section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 25px;
 }
 
 .info{
@@ -664,8 +667,66 @@ footer section{
 .form  {
     width: 450px;
 }
+.site_logo_f{
+    text-align: center;
+}
+.site_logo_f em{
+    display: block;
+    text-transform: none;
+    font: italic 26px BascervI, Arial, sans-serif;
+    position: relative;
+    top: -15px;
+}
+footer h3{
+    font: 24px ProximaNovaBd, Arial, sans-serif;
+    text-align: center;
+}
+.info p{
+    font-size: 22px;
+} 
+.info span{
+    display: inline-block;
+} 
+.info span:last-child{
+    font-family: ProximaNova;
+} 
+.info a, .info span{
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    line-height: 1.5;
+} 
+.info a{
+    padding-left: 40px;
+}
+.info a[href^="tel"]{
+    background-image: url("../img/email_insurance.png");
+}
+.info a[href^="mailto"]{
+    background-image: url("../img/phone.png")
+}
 
+.form  p{
+    text-align: center;
+    font-size: 24px;
+}
+footer .form form{
+    font: 16px ProximaNovaLt, Arial, sans-serif;
+}
 
+.copyright{
+    text-align: center;
+    color: #f4f4f4;
+    font-family:  ProximaNova;
+}
+.copyright span{
+    display: inline-block;
+    background-image: url("../img/qlab_logo.png");
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    line-height: 80px;
+    padding-left: 100px;
+}
 
 
 
