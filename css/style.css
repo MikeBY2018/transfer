@@ -1,5 +1,7 @@
 @import url('fonts.css');
 @import url('normalize.css');
+@import url('owl.carousel.min.css');
+/* @import url('owl.theme.default.css'); */
 
 
 
@@ -596,12 +598,72 @@ h3{
     background-image: url("../img/photo_gadget.jpg");
     margin-bottom: 35px;
 }
+.reviews_slider{
+    color: #d2d7da;
+    font: 16px ProximaNovaLt, Arial, sans-serif;
+    margin-top: 130px;
+    margin-bottom: 40px;
+}
+.reviews_slider p{
+    margin-top: 0;
+}
+.reviews_slider span{
+    font-family: ProximaNovaSb, Arial, sans-serif;
+}
+.reviews_slider .owl-item div{
+    margin: 0 10%;
+    padding: 35px 5px 35px 120px ;
+    background-image: url("../img/icon_friends.png");
+    /* background-size: cover; */
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+}
+.reviews_slider .owl-item:nth-child(odd) div{
+    background-color: #c3c3c3;
+    border-radius: 10px;
+}
 
+/*кнопки слайдера*/
+.owl-nav {
+    position: relative;
+    top: -170px;
+}
+.owl-prev{
+    position: absolute;
+    left: 0;
+}
+.owl-next{
+    position: absolute;
+    right: 0;
+}
+.owl-nav span{
+    color: transparent;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-left: 5px solid #212931;
+    border-bottom: 5px solid #212931;
+}
+.owl-nav .owl-prev span{
+    transform: rotate(45deg);
+}
+.owl-nav .owl-next span{
+    transform: rotate(225deg);
+}
+/*Подвал*/
 
+footer section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-
-
-
+.info{
+    width: 450px;
+}
+.form  {
+    width: 450px;
+}
 
 
 
@@ -625,6 +687,10 @@ h3{
     }
     .passenger_img.one{
         margin-bottom: 20px;
+    }
+    .reviews_slider .owl-item div{
+        margin: 0 2%;
+        padding: 15px 5px 15px 100px ;
     }
 }
 
