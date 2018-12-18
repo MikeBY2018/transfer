@@ -177,8 +177,8 @@ nav a{
 .place label:first-child{
     margin-bottom: 15px;
 }
-/*настройка checkbox*/
-input[type="checkbox"]{
+/*настройка radio*/
+input[type="radio"]{
     display: none;
 }
 input[type="text"]{
@@ -301,7 +301,7 @@ h3{
     transform-origin: 0%;
     transform: rotate(180deg);   
 }/**/
- .lines::after{
+.lines::after{
     content: "";
     display: block;
     border: 3px solid #f87f01;
