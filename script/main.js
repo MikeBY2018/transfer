@@ -85,6 +85,16 @@ function showSlidesvz(n) {
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none"; 
   }
-  slides[slideIndex-1].style.display = "block";
-  console.log(slides); 
+  slides[slideIndex-1].style.display = "block"; 
+}
+// end slider in our_cars
+
+// button Order
+
+var btnOrder = document.querySelectorAll('.btn_order');
+for(var i = 0; i < btnOrder.length; i++){
+  btnOrder[i].onclick = toThanks;
+}
+function toThanks(){
+  window.location.href = 'thanks.html';
 }

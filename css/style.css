@@ -8,7 +8,7 @@
 
 /*Настройка страницы*/
 body{
-    background-color: #cfc;
+    background-color: #aaa;
     font: 20px ProximaNovaSb, Arial, sans-serif;
     overflow-x: hidden;
 }
@@ -739,7 +739,13 @@ footer h3{
     padding-left: 100px;
 }
 
-
+.cheked_thanks{
+    padding: 70px 0;
+    text-align: center;
+    font: 26px ProximaNova, Arial, sans-serif;
+    text-transform: uppercase;
+    line-height: 2;
+}
 
 @media screen and (max-width: 1050px){
     .site_logo{
@@ -760,6 +766,9 @@ footer h3{
     .our_cars{
             padding-top: 0;            
         }
+        .center_our_cars{
+            text-align: center;
+        }
    
     .tabcontent{
         -webkit-flex-direction: column;
@@ -770,17 +779,17 @@ footer h3{
         -ms-align-items: center;
         align-items: center;
     }
-            .select{
-                position: relative;
-                text-align: center;
-            }
-            .tab{
-                margin: auto;
-            }
-            .tabcontent_comments{
-                padding-top: 50px;
-            }
- }
+        .select{
+            position: relative;
+            text-align: center;
+        }
+        .tab{
+            margin: auto;
+        }
+        .tabcontent_comments{
+            padding-top: 50px;
+        }
+}
 
 
 @media screen and (max-width: 860px){
