@@ -1,6 +1,8 @@
 @import url('fonts.css');
 @import url('normalize.css');
 @import url('owl.carousel.min.css');
+@import url('w3.css');
+
 /* @import url('owl.theme.default.css'); */
 
 
@@ -30,6 +32,7 @@ ul{
     display: block;
 }
 a{
+    position: relative;
     text-decoration: none;
     display: inline-block;
     color: #212931;
@@ -54,6 +57,14 @@ header, footer{
     position: relative;
 }
 /*настройка кнопки cбрасываем стили браузера и устанавливаем свои*/
+.w3-btn{
+    background-color: #f87f01;
+    color: #212931;
+    font: 25px ProximaNovaSb, Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+
 .btn{
     cursor: pointer;
     display: inline-block;
@@ -92,13 +103,13 @@ header, footer{
 /*Элементы*/
 
 header nav, .calling{
-    float: left;
-    margin-top: 10px;
+    /*float: left;
+    margin-top: 10px;*/
 }
 .calling{
-    position: relative;
+    text-align: center;
 }
-.calling a::before{
+.calling>a::before{
     content: "";
     display: inline-block;
     position: absolute;
@@ -110,22 +121,27 @@ header nav, .calling{
     background-repeat: no-repeat;
     background-position: center;
 }
+.calling img{
+    width: 30px;
+    margin-right: 5px;
+}
 .calling b{
     display: inline-block;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 0px;
 }
 header nav{
-    margin-right: 5%;
+    /*margin-right: 5%;*/
 }
 .btn_nav{
-    float: right;  
-    margin-top: 7px;  
-    font: 20px ProximaNova, Arial, sans-serif;  
+    /*float: right;  
+    margin-top: 7px; */ 
+    font: 20px ProximaNova, Arial, sans-serif; 
+    white-space: nowrap; 
 }
 header nav li{
     display: inline-block;
-    margin-right: 40px;
+    /*margin-right: 40px;*/
 }
 nav a{
     
@@ -134,14 +150,18 @@ nav a{
 /*main*/
 .filter{
     background-color: #fbfbfb;
-    padding-top: 5px;
+    padding: 25px 0;
     
 }
 .site_logo{
-    float: left;
+   /* float: left;
     text-align: center;
-    margin-right: 10%;
+    margin-right: 10%;*/
     margin-bottom: -12px;
+    width: 200px;
+}
+img{
+    width: 100%;
 }
 .site_logo em{
     display: block;
@@ -151,12 +171,12 @@ nav a{
     top: -15px;
 }
 .filter_details{
-    float: left;
+    /*float: left;*/
     font-size: 26px;
-
 }
-.filter_details>div{
-    float: left;
+
+ /*.filter_details>div{
+   float: left;
 }
 .filter_details label{
     display: block;
@@ -164,12 +184,13 @@ nav a{
 .rent{
     margin-right: 100px;    
     padding: 15px 0;
-}
+}*/
 .place{
-    padding: 15px 0;
+    /*padding: 15px 0;*/
 }
-.check_tr{
-    margin-bottom: 18px;
+.rent label{
+    line-height: 40px;
+    display: block;
 }
 .place label{
     text-align: right;
@@ -182,7 +203,7 @@ input[type="radio"]{
     display: none;
 }
 input[type="text"]{
-    width: 225px;
+    /*width: 225px;*/
     font-size: 24px;
 }
 .check {
@@ -314,6 +335,7 @@ h3{
 } 
 .absolute{
     position: absolute;
+    overflow: hidden;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -599,7 +621,7 @@ h3{
 .reviews_slider{
     color: #d2d7da;
     font: 16px ProximaNovaLt, Arial, sans-serif;
-    margin-top: 130px;
+    margin-top: 30px;
     margin-bottom: 50px;
 }
 .reviews_slider p{
@@ -708,16 +730,16 @@ footer h3{
     text-align: center;
     font-size: 24px;
 }
-.form input[type="text"], textarea{
+input[name="phone"], input[name="name"], textarea{
     font: 16px ProximaNovaLt, Arial, sans-serif;
     width: 100%;
-    padding: 0;
-    margin-bottom: 35px;
+    /*padding: 0;
+    margin-bottom: 35px;*/
     box-sizing: border-box;
     border-color: #000;
     border-width: 1px;
 }
-.form input[type="text"]{
+input[type="text"]{
     height: 40px;
 }
 .form .btn{
@@ -747,22 +769,18 @@ footer h3{
     line-height: 2;
 }
 
-@media screen and (max-width: 1050px){
-    .site_logo{
-        float: none;
-        margin: 0;
-    }
-    .btn_nav{
-        display: block;
-        float: none;
-        margin: auto;
-        clear: both;
-    }
+
+
+@media screen and (min-width: 993px){
     .calling{
-        float: right;
+        text-align: right;
     }
 }
-@media screen and (max-width: 960px){
+
+
+
+
+@media screen and (max-width: 962px){
     .our_cars{
             padding-top: 0;            
         }
@@ -792,22 +810,7 @@ footer h3{
 }
 
 
-@media screen and (max-width: 860px){
-
-    header nav {
-        margin-right: 0;
-        float: none;
-    }
-    header nav li{
-        margin-right: 2vw;
-    }
-    .rent{
-        margin-right: 2vw;
-    }
-    .filter_details{
-        float: none;
-    }
-}
+/*
 
 @media screen and (max-width: 550px){
     header nav li{
@@ -892,4 +895,5 @@ footer h3{
     input[type="text"] {
         width: 48vw;
     }
-}
+
+}*/

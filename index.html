@@ -9,33 +9,40 @@
 </head>
 <body>
     <header>
-        <div class="wrapper clearfix">
-            <nav>
-                <ul>
-                    <li><a href="">Главная</a></li>
-                    <li><a href="">Туристическим агентам</a></li>
-                    <li><a href="">Контакты</a></li>
-                </ul>
+        <div class="wrapper w3-row">
+            <nav class="w3-col l9">
+                <div class="w3-bar">
+                    <a href="#" class="w3-bar-item w3-mobile">Главная</a>
+                    <a href="#tourism" class="w3-bar-item w3-mobile">Туристическим агентам</a>
+                    <a href="#rewiev" class="w3-bar-item w3-mobile">Отзывы</a>
+                    <a href="#contacts" class="w3-bar-item w3-mobile">Контакты</a>
+                </div>
             </nav>
-            <div class="calling">
+            <div class="calling w3-col l3 w3-padding-16">
                 <a href="tel:+375333333333">+375(33)333-33-33</a><br>
-                <b>Заказать звонок</b>            
-            </div>
-            <button class="btn btn_nav">Войти</button>
+                <b>
+                    <a title="Viber" href="viber://add?number=375333333333">
+                        <img src="img/viber.svg" alt="Viber">Viber</a>
+                    <a title="WhatsApp" href="whatsapp://send?phone=+375333333333">
+                        <img src="img/whatsapp.svg" alt="WhatsApp">WhatsApp</a> 
+                    <a title="Telegram" href="tg://resolve?domain=nikname">
+                        <img src="img/telegram.svg" alt="Telegram">Telegram</a>
+                </b>            
+            </div>        
         </div>
     </header>
     <main>
         <div class="filter">
-            <div class="wrapper clearfix">
-                <div class="site_logo"> 
+            <div class="wrapper clearfix w3-row">
+                <div class="site_logo w3-col w3-center w3-mobile w3-margin-bottom"> 
                     <a href=""><img src="img/logo.png" alt="RG"></a>
                     <em>Обгоняем время</em>
                 </div>
-                <div class="filter_details clearfix">
-                    <div class="rent">
+                <div class="filter_details w3-rest w3-row-padding w3-mobile w3-margin-bottom">
+                    <div class="rent w3-col l4">
                         <div class="check_tr">
                             <input type="radio" id="transfer" class="mark" value="transfer" name="options">
-                            <label for="transfer" class="check">
+                            <label for="transfer" class="check w3-margin-bottom">
                                 <svg width="24px" height="24px" viewBox="0 0 18 18">
                                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
                                     <polyline points="1 9 7 14 15 4"></polyline>
@@ -44,7 +51,7 @@
                         </div>
                         <div class="check_dr">
                             <input type="radio" id="driver" class="mark" value="driver" name="options">
-                            <label for="driver" class="check">
+                            <label for="driver" class="check w3-margin-bottom">
                                 <svg width="24px" height="24px" viewBox="0 0 18 18">
                                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
                                     <polyline points="1 9 7 14 15 4"></polyline>
@@ -52,9 +59,13 @@
                             </label>  
                         </div>                        
                     </div>
-                    <div class="place">
-                        <label>Откуда&nbsp; <input type="text"></label>
-                        <label>Куда&nbsp; <input type="text"></label>
+                    <div class="place w3-col l4">
+                        <label class=""><input type="text" name="from" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Откуда"></label>
+                        <label class=""><input type="text" name="to" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Куда"></label>
+                    </div>
+                    <div class="telorder w3-col l4">
+                        <input type="text" name = "phone" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона">
+                        <button class="w3-btn w3-block">Заказать звонок</button>    
                     </div>
                 </div>
             </div>   
@@ -65,9 +76,9 @@
                     <h1>Интеллектуальный трансфер в любую точку Беларуси</h1>
                 </div>                
             </div>
-            <strong class="notes">Ваше путешествие начинается здесь</strong>            
+            <strong class="notes" id="tourism">Ваше путешествие начинается здесь</strong>       
         </div>
-        <div class="servises white">
+        <div class="servises white" >
             <div class="wrapper">
                 <h2><span class="lines">Преимущества интеллектуального сервиса</span></h2>
                 <div class="servises_list">
@@ -87,93 +98,95 @@
             </div>
         </div>
         <div class="our_cars gray">
-                <div class="wrapper">
-                    <h2 class="absolute"><span class="lines">Наши автомобили</span></h2>
-                    <div class="cars_select">
-                            <div class="select">
-                                <span>Выбрать автомобиль</span>
-                                <div class="tab">
-                                    <button class="tablinks">Стандарт</button>
-                                    <button class="tablinks">Бизнес</button>
-                                </div>
-                            </div>    
-                            <div id="standart" class="tabcontent">
-                                <div class="tabcontent_comments">
-                                    <p>Мы используем ВАЗ - автомобили, пропитанные духом отечества</p>
-                                    <p>Признанная во всем мире бюджетность автомобиля</p>
-                                    <p>Комфорт и удобство в пути среднего уровня</p>                                    
-                                </div>
-                                <div class="slider_vaz">
-                                    <div class="slideshow-container">
-                                        <!-- Full-width images with number and caption text -->
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">1 / 3</div>
-                                            <img src="img/vaz.jpg" style="width:100%">
-                                            <div class="text">Caption Text</div>
-                                        </div>
-                                        
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">2 / 3</div>
-                                            <img src="img/vaz_2.jpg" style="width:100%">
-                                            <div class="text">Caption Two</div>
-                                        </div>
-                                        
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">3 / 3</div>
-                                            <img src="img/vaz_3.jpg" style="width:100%">
-                                            <div class="text">Caption Three</div>
-                                        </div>
-                                        
-                                        <!-- Next and previous buttons -->
-                                        <a class="prev">&#10094;</a>
-                                        <a class="next">&#10095;</a>
+            <div class="wrapper">
+                <h2 class="absolute"><span class="lines">Наши автомобили</span></h2>
+                <div class="cars_select">
+                        <div class="select">
+                            <span>Выбрать автомобиль</span>
+                            <div class="tab">
+                                <button class="tablinks">Стандарт</button>
+                                <button class="tablinks">Бизнес</button>
+                            </div>
+                        </div>    
+                        <div id="standart" class="tabcontent">
+                            <div class="tabcontent_comments">
+                                <p>Мы используем ВАЗ - автомобили, пропитанные духом отечества</p>
+                                <p>Признанная во всем мире бюджетность автомобиля</p>
+                                <p>Комфорт и удобство в пути среднего уровня</p>                                    
+                            </div>
+                            <div class="slider_vaz">
+                                <div class="slideshow-container">
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">1 / 3</div>
+                                        <img src="img/vaz.jpg" alt="Standart1" style="width:100%">
+                                        <div class="text">Caption Text</div>
                                     </div>
+                                    
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">2 / 3</div>
+                                        <img src="img/vaz_2.jpg" alt="Standart2" style="width:100%">
+                                        <div class="text">Caption Two</div>
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">3 / 3</div>
+                                        <img src="img/vaz_3.jpg" alt="Standart3" style="width:100%">
+                                        <div class="text">Caption Three</div>
+                                    </div>
+                                    
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev">&#10094;</a>
+                                    <a class="next">&#10095;</a>
                                 </div>
                             </div>
-                            <div id="business" class="tabcontent">
-                                <div class="tabcontent_comments">
-                                    <p>Мы используем Volvo - автомобили, обладающие интеллектом</p>
-                                    <p>Признанная во всем мире безопасность от Volvo</p>
-                                    <p>Комфорт и удобство в пути высокого уровня</p>     
-                                </div>
-                                <div class="slider_volvo">
-                                    <div class="slideshow-container">
-                                        <!-- Full-width images with number and caption text -->
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">1 / 4</div>
-                                            <img src="img/volvo.jpg" style="width:100%">
-                                            <div class="text">Caption Text</div>
-                                        </div>
-                                        
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">2 / 4</div>
-                                            <img src="img/volvo_2.jpg" style="width:100%">
-                                            <div class="text">Caption Two</div>
-                                        </div>
-                                        
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">3 / 4</div>
-                                            <img src="img/volvo_3.jpg" style="width:100%">
-                                            <div class="text">Caption Three</div>
-                                        </div>
+                        </div>
+                        <div id="business" class="tabcontent">
+                            <div class="tabcontent_comments">
+                                <p>Мы используем Volvo - автомобили, обладающие интеллектом</p>
+                                <p>Признанная во всем мире безопасность от Volvo</p>
+                                <p>Комфорт и удобство в пути высокого уровня</p>     
+                            </div>
+                            <div class="slider_volvo">
+                                <div class="slideshow-container">
+                                    <!-- Full-width images with number and caption text -->
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">1 / 4</div>
+                                        <img src="img/volvo.jpg" alt="Buisness_1" style="width:100%">
+                                        <div class="text">Caption Text</div>
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">2 / 4</div>
+                                        <img src="img/volvo_2.jpg" alt="Buisness_2" style="width:100%">
+                                        <div class="text">Caption Two</div>
+                                    </div>
+                                    
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">3 / 4</div>
+                                        <img src="img/volvo_3.jpg" alt="Buisness_3" style="width:100%">
+                                        <div class="text">Caption Three</div>
+                                    </div>
 
-                                        <div class="mySlides fade">
-                                            <div class="numbertext">4 / 4</div>
-                                            <img src="img/volvo_4.jpg" style="width:100%">
-                                            <div class="text">Caption Four</div>
-                                        </div>
-                                        
-                                        <!-- Next and previous buttons -->
-                                        <a class="prev">&#10094;</a>
-                                        <a class="next">&#10095;</a>
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">4 / 4</div>
+                                        <img src="img/volvo_4.jpg" alt="Buisness_4" style="width:100%">
+                                        <div class="text">Caption Four</div>
                                     </div>
-                                </div>                                
-                            </div>
-                    </div>
-                    <div class="center_our_cars">
-                        <button class="btn btn_order">Сделать заказ</button>
-                    </div>
+                                    
+                                    <!-- Next and previous buttons -->
+                                    <a class="prev">&#10094;</a>
+                                    <a class="next">&#10095;</a>
+                                </div>
+                            </div>                                
+                        </div>
                 </div>
+                <div class="center_our_cars">
+                    <form action="" id="order">
+                        <button class="btn btn_order">Сделать заказ</button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="tariffs white">
             <div class="wrapper">
@@ -321,6 +334,7 @@
         </div>
         <div class="white">
             <div class="wrapper">
+                <h2><span class="lines" id="rewiev">Отзывы</span></h2>
                 <div class="reviews_slider">
                     <div class="owl-carousel owl-theme">
                         <div>
@@ -351,7 +365,7 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer id="contacts">
         <strong class="notes">Мы формируем новую культуру перемещения</strong>
         <div class="wrapper">            
             <section>
@@ -369,12 +383,12 @@
                     </p>
                 </div>
                 <div class="form">
-                    <p>Здесь вы можете оставить отзыв о нашем сервисе</p>
+                    <p>Здесь вы можете cделать заказ</p>
                     <form action="#" method="POST">
                         <input type="text" name = "name" placeholder="Введите имя">
                         <input type="text" name = "phone" placeholder="Введите номер телефона">
                         <textarea name="review" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                        <button type="submit" class="btn">Оставить отзыв</button>
+                        <button type="submit" class="btn">Заказать</button>
                     </form>
                 </div>
             </section>            
