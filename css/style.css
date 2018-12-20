@@ -3,7 +3,7 @@
 @import url('owl.carousel.min.css');
 @import url('w3.css');
 
-/* @import url('owl.theme.default.css'); */
+@import url('owl.theme.default.css'); 
 
 
 
@@ -57,11 +57,17 @@ header, footer{
     position: relative;
 }
 /*настройка кнопки cбрасываем стили браузера и устанавливаем свои*/
-.w3-btn{
-    background-color: #f87f01;
+.w3-button{
+    background-color: hsl(31,99%,49%);
     color: #212931;
     font: 25px ProximaNovaSb, Arial, sans-serif;
     text-transform: uppercase;
+    transition: background-color 0.5s;
+}
+.w3-button:hover{
+    background-color: hsl(31,89%,59%) !important;
+    -webkit-box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.5);
+    box-shadow: 0px 2px 2px -1px rgba(0,0,0,0.5);
 }
 
 
@@ -337,7 +343,6 @@ h3{
     left: 0;
     right: 0;
     top: -78px;
-    text-align: center;
     z-index: 1;
 }
 .servises{
@@ -642,8 +647,8 @@ h3{
 
 /*кнопки слайдера*/
 .owl-nav {
-    position: relative;
-    top: -170px;
+    /*position: relative;*/
+    /*top: -170px;*/
 }
 .owl-prev{
     position: absolute;
@@ -813,13 +818,9 @@ input[type="text"], textarea{
 }
 
 
-/*
+
 
 @media screen and (max-width: 550px){
-    header nav li{
-        display: block;
-        text-align: center;
-    }
     .tariffs table{
         width: 100%;
     }
@@ -835,32 +836,25 @@ input[type="text"], textarea{
     }
     .passenger_img.one{
         margin-bottom: 20px;
+    }    
+    .itrb, .passenger_care div, .width_inherit{
+        min-height: 400px;
     }
     .reviews_slider .owl-item div{
         margin: 0 2%;
-        padding: 15px 5px 15px 100px ;
+        padding: 120px 15px 15px;
+        background-position: 50% 5%;
     }
     .servises_list{
-    margin-bottom: 200px;
+        margin-bottom: 200px;
     }
-    .calling{
-        float: none;
-        margin: 15px auto;
-        text-align: center;
-    }
-    .calling a{
-        position: relative;
-    }
-    .filter{
-        padding: 20px 0;
-    }
-    .filter_details{
-        margin-left: 5vw;
-        font-size: 7vw;
-    }
-    .rent{
-        margin-right: 0;
-    }
+        .servises_list_item{
+            flex-basis: 100%;
+            text-align: center;
+        } 
+            .servises_list_item p{
+                text-align: center;
+            }
 }
 
 
@@ -892,11 +886,5 @@ input[type="text"], textarea{
     .btn{
         font-size: 5vw;
     }
-    .wrapper{
-        overflow: hidden;
-    }
-    input[type="text"] {
-        width: 48vw;
-    }
 
-}*/
+}/**/

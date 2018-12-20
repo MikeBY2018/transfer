@@ -65,7 +65,7 @@
                     </div>
                     <div class="telorder w3-col l4">
                         <input type="text" name = "phone" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона">
-                        <button class="w3-btn w3-block">Заказать звонок</button>    
+                        <button class="w3-button w3-block">Заказать звонок</button>    
                     </div>
                 </div>
             </div>   
@@ -183,7 +183,7 @@
                 </div>
                 <div class="center_our_cars">
                     <form action="" id="order">
-                        <button class="btn btn_order">Сделать заказ</button>
+                        <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
                     </form>
                 </div>
             </div>
@@ -292,7 +292,7 @@
                     </table>                       
                 </div>
                 <div class="center">
-                    <button class="btn btn_order">Сделать заказ</button>
+                    <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
                 </div>
             </div>
         </div>
@@ -328,7 +328,7 @@
                     <p class="sign">Признанная безопасность от Volvo: все автомобили оснащены электронными системами безопасности city safety</p>
                 </div>
                 <div class="center">
-                    <button class="btn btn_order">Сделать заказ</button>
+                    <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
                 </div>                
             </div>
         </div>
@@ -384,7 +384,7 @@
                 </div>
                 <div class="form">
                     <p>Здесь вы можете cделать заказ</p>
-                    <form action="#" method="POST">
+                    <form action="#" method="POST" id="form-order">
                         <input type="text" name = "name" placeholder="Введите имя" class="w3-input w3-border w3-round-large w3-margin-bottom">
                         <input type="text" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom">
                         <textarea name="review" id="" cols="30" rows="10" placeholder="Сообщение" class="w3-input w3-border w3-round-large w3-margin-bottom"></textarea>
@@ -404,18 +404,18 @@
     <script>
         $(document).ready(function(){
             $('.owl-carousel').owlCarousel({
-                loop:true,
-                dots: false,                
+                loop:true,                                
                 responsiveClass:true,
                 responsive:{
                     0:{
                         items:1,
                         margin:5,
-                        nav:true
+                        dots: true,
                     },
-                    850:{
+                    800:{
                         items:2,
                         nav:true,
+                        dots: false,
                         margin:20,
                         loop:false
                     }

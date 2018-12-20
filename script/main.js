@@ -91,10 +91,10 @@ function showSlidesvz(n) {
 
 // button Order
 
-var btnOrder = document.querySelectorAll('.btn_order');
-for(var i = 0; i < btnOrder.length; i++){
-  btnOrder[i].onclick = toThanks;
-}
-function toThanks(){
-  window.location.href = 'thanks.html';
-}
+// var btnOrder = document.querySelectorAll('.btn_order');
+// for(var i = 0; i < btnOrder.length; i++){
+//   btnOrder[i].onclick = toThanks;
+// }
+// function toThanks(){
+//   window.location.href = 'thanks.html';
+// }
