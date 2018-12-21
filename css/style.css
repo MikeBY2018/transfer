@@ -240,11 +240,13 @@ nav a{
 }
 
 /*main*/
-.filter{
+.filter, .filter1{
     background-color: #fbfbfb;
     padding: 25px 0;
-    
 }
+.filter1{
+        display: none;
+    }
 .site_logo{
    /* float: left;
     text-align: center;
@@ -305,7 +307,7 @@ input[type="radio"]{
 .check:before {
     content: "";
     position: absolute;
-    top: -8px;
+    top: -5px;
     left: -12px;
     width: 48px;
     height: 48px;
@@ -910,7 +912,6 @@ input[type="text"], textarea{
 
 
 
-
 @media screen and (max-width: 550px){
     .tariffs table{
         width: 100%;
@@ -956,10 +957,16 @@ input[type="text"], textarea{
     header nav{
         position: relative;
     }
+    .calling>a{
+  
+    }
+
     #menu_toggle{
         display: block;
         position: absolute;
         z-index: 2;
+        top: 0;
+        right: 0;
     }
     .w3-padding-16{
         padding-bottom: 0px!important;
@@ -970,8 +977,15 @@ input[type="text"], textarea{
     label.w3-margin-bottom{
         font-size: 20px;
     }
-    .filter{
-        padding: 10px;
+    .filter, .filter1{
+        padding-top: 15px;
+        padding-bottom: 1px;
+    }     
+    .filter .filter_details{
+        display: none;
+    }
+    .filter1{
+        display: block;
     }
     .cars_select span{
         display: block;

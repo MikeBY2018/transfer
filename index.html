@@ -147,10 +147,10 @@
                         </label>
                     </div>
                     <div class="telorder w3-col l4">
-                        <form action="mail.php" method="POST" id="form-order" accept-charset="utf-8" enctype="text/plain">
-                            <input type="tel" name = "phone" title="В формате +375 (xx) xxx xx xx" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона" required autofocus 
+                        <form action="mail.php" method="POST" id="form-order">
+                            <input type="tel" name = "phone" title="В формате +375 xx xxx xx xx" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона" required autofocus 
                             pattern="[\+]?(375)[\s]?[\(?|\s|\-]?(25|29|33|44)[\s]?[\(?|\s|\-]?\d{3}[\s|\-]?\d{2}[\s|\-]?\d{2}">
-                            <button class="w3-button w3-block">Заказать звонок</button>
+                            <button type="submit" class="w3-button w3-block">Заказать звонок</button>
                         </form>    
                     </div>
                 </div>
@@ -163,6 +163,47 @@
                 </div>                
             </div>
             <strong class="notes" id="tourism">Ваше путешествие начинается здесь</strong>       
+        </div>
+        <div class="filter1">
+            <div class="wrapper clearfix">
+                <div class="filter_details w3-rest w3-row-padding w3-mobile w3-margin-bottom">
+                    <div class="rent w3-col l4 w3-margin-bottom">
+                        <div class="check_tr">
+                            <input type="radio" id="transfer1" class="mark" value="transfer" name="options" form="form-order1">
+                            <label for="transfer1" class="check w3-margin-bottom">
+                                <svg width="24px" height="24px" viewBox="0 0 18 18">
+                                    <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>&nbsp; Трансфер                            
+                            </label> 
+                        </div>
+                        <div class="check_dr">
+                            <input type="radio" id="driver1" class="mark" value="driver" name="options" form="form-order1">
+                            <label for="driver1" class="check w3-margin-bottom">
+                                <svg width="24px" height="24px" viewBox="0 0 18 18">
+                                    <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
+                                    <polyline points="1 9 7 14 15 4"></polyline>
+                                </svg>&nbsp; Аренда с водителем
+                            </label>  
+                        </div>                        
+                    </div>
+                    <div class="place w3-col l4">
+                        <label class="">
+                            <input type="text" name="from" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Откуда" form="form-order1" required>
+                        </label>
+                        <label class="">
+                            <input type="text" name="to" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Куда" form="form-order1" required>
+                        </label>
+                    </div>
+                    <div class="telorder w3-col l4">
+                        <form action="mail.php" method="POST" id="form-order1">
+                            <input type="tel" name = "phone" title="В формате +375 xx xxx xx xx" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона" required autofocus 
+                            pattern="[\+]?(375)[\s]?[\(?|\s|\-]?(25|29|33|44)[\s]?[\(?|\s|\-]?\d{3}[\s|\-]?\d{2}[\s|\-]?\d{2}">
+                            <button type="submit" class="w3-button w3-block">Заказать звонок</button>
+                        </form>    
+                    </div>
+                </div>
+            </div>   
         </div>
         <div class="servises white" >
             <div class="wrapper">
@@ -470,9 +511,9 @@
                 </div>
                 <div class="form">
                     <p>Здесь вы можете cделать заказ</p>
-                    <form action="mail.php" method="POST" id="form-order1">
+                    <form action="mail1.php" method="POST" id="form-order2">
                         <input type="text" name = "name" placeholder="Введите имя" class="w3-input w3-border w3-round-large w3-margin-bottom" required>
-                        <input type="tel" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom" title="В формате +375 (xx) xxx xx xx" required pattern="\d">
+                        <input type="tel" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom" title="В формате +375 xx xxx xx xx" required  pattern="[\+]?(375)[\s]?[\(?|\s|\-]?(25|29|33|44)[\s]?[\(?|\s|\-]?\d{3}[\s|\-]?\d{2}[\s|\-]?\d{2}">
                         <textarea name="review" cols="30" rows="10" placeholder="Сообщение" class="w3-input w3-border w3-round-large w3-margin-bottom"></textarea>
                         <button type="submit" class="btn">Заказать</button>
                     </form>
@@ -486,7 +527,8 @@
     <script src="script/jquery-3.2.1.min.js"></script>
     <script src="script/owl.carousel.min.js"></script>
     <script src="script/main.js"></script>
-    <script src="script/mail.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/toggle.js"></script>
     <script>
         $(document).ready(function(){
             $('.owl-carousel').owlCarousel({
