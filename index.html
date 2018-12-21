@@ -2,15 +2,94 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
     <title>Интеллектуальный трансфер в любую точку РБ</title>
+
+    
+    <!-- Short description of the page (limit to 150 characters) -->
+    <!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
+    <meta name="description" content="A description of the page">
+    
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow,noodp"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    
+    <!-- Tells Google not to show the sitelinks search box -->
+    <meta name="google" content="nositelinkssearchbox">
+    
+    <!-- Tells Google not to provide a translation for this page -->
+    <meta name="google" content="notranslate">
+    
+    <!-- Verify ownership for Google Search Console -->
+    <meta name="google-site-verification" content="verification_token">
+    
+    <!-- Used to name software used to build the website (i.e. - Wordpress, Dreamweaver) -->
+    <meta name="generator" content="program">
+    
+    <!-- Short description of your site's subject -->
+    <meta name="subject" content="your website's subject">
+    
+    <!-- Very short sentence describing the purpose of the website -->
+    <meta name="abstract" content="your website's subject">
+    
+    <!-- Describes the topic of the website -->
+    <meta name="topic" content="">
+    
+    <!-- Brief summary of the company or purpose of the website -->
+    <meta name="summary" content="">
+    
+    <!-- A deprecated tag that does the same as the keywords meta tag -->
+    <meta name="classification" content="business">
+    
+    <!-- Full domain name or web address -->
+    <meta name="url" content="https://example.com/">
+    
+    <!-- Does the same as URL, older and not supported -->
+    <meta name="identifier-URL" content="https://example.com/">
+    
+    <meta name="directory" content="submission">
+    
+    <!-- Does the same function as the keywords tag -->
+    <meta name="category" content="">
+    
+    <!-- Makes sure your website shows up in all countries and languages -->
+    <meta name="coverage" content="Worldwide">
+    
+    <!-- Does the same as the coverage tag -->
+    <meta name="distribution" content="Global">
+    
+    <!-- Gives a general age rating based on sites content -->
+    <meta name="rating" content="General">
+    
+    <!-- Allows control over how referrer information is passed -->
+    <meta name="referrer" content="never">
+    
+    <!-- Disable automatic detection and formatting of possible phone numbers -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Geo tags -->
+    <meta name="ICBM" content="latitude, longitude">
+    <meta name="geo.position" content="latitude;longitude">
+    <meta name="geo.region" content="country[-state]"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
+    <meta name="geo.placename" content="city/town"><!-- eg. content="New York City" -->
 </head>
 <body>
     <header>
         <div class="wrapper w3-row">
             <nav class="w3-col l9">
+                <div id="menu_toggle">
+                    <input type="checkbox" id="checkbox3" class="checkbox3 visuallyHidden">
+                    <label for="checkbox3">
+                        <div class="hamburger hamburger3">
+                            <span class="bar bar1"></span>
+                            <span class="bar bar2"></span>
+                            <span class="bar bar3"></span>
+                            <span class="bar bar4"></span>
+                        </div>
+                    </label>    
+                </div>
                 <div class="w3-bar">
                     <a href="#" class="w3-bar-item w3-mobile">Главная</a>
                     <a href="#tourism" class="w3-bar-item w3-mobile">Туристическим агентам</a>
@@ -41,7 +120,7 @@
                 <div class="filter_details w3-rest w3-row-padding w3-mobile w3-margin-bottom">
                     <div class="rent w3-col l4">
                         <div class="check_tr">
-                            <input type="radio" id="transfer" class="mark" value="transfer" name="options">
+                            <input type="radio" id="transfer" class="mark" value="transfer" name="options" form="form-order">
                             <label for="transfer" class="check w3-margin-bottom">
                                 <svg width="24px" height="24px" viewBox="0 0 18 18">
                                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
@@ -50,7 +129,7 @@
                             </label> 
                         </div>
                         <div class="check_dr">
-                            <input type="radio" id="driver" class="mark" value="driver" name="options">
+                            <input type="radio" id="driver" class="mark" value="driver" name="options" form="form-order">
                             <label for="driver" class="check w3-margin-bottom">
                                 <svg width="24px" height="24px" viewBox="0 0 18 18">
                                     <path d="M1,9 L1,3.5 C1,2 2,1 3.5,1 L14.5,1 C16,1 17,2 17,3.5 L17,14.5 C17,16 16,17 14.5,17 L3.5,17 C2,17 1,16 1,14.5 L1,9 Z"></path>
@@ -60,12 +139,19 @@
                         </div>                        
                     </div>
                     <div class="place w3-col l4">
-                        <label class=""><input type="text" name="from" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Откуда"></label>
-                        <label class=""><input type="text" name="to" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Куда"></label>
+                        <label class="">
+                            <input type="text" name="from" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Откуда" form="form-order" required>
+                        </label>
+                        <label class="">
+                            <input type="text" name="to" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Куда" form="form-order" required>
+                        </label>
                     </div>
                     <div class="telorder w3-col l4">
-                        <input type="text" name = "phone" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона">
-                        <button class="w3-button w3-block">Заказать звонок</button>    
+                        <form action="mail.php" method="POST" id="form-order" accept-charset="utf-8" enctype="text/plain">
+                            <input type="tel" name = "phone" title="В формате +375 (xx) xxx xx xx" class="w3-input w3-border w3-round-large w3-margin-bottom" placeholder="Введите номер телефона" required autofocus 
+                            pattern="[\+]?(375)[\s]?[\(?|\s|\-]?(25|29|33|44)[\s]?[\(?|\s|\-]?\d{3}[\s|\-]?\d{2}[\s|\-]?\d{2}">
+                            <button class="w3-button w3-block">Заказать звонок</button>
+                        </form>    
                     </div>
                 </div>
             </div>   
@@ -182,8 +268,8 @@
                         </div>
                 </div>
                 <div class="center_our_cars">
-                    <form action="" id="order">
-                        <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
+                    <form action="mail.php" id="order">
+                        <a href="#form-order1" class="btn btn_order">Сделать заказ</a>
                     </form>
                 </div>
             </div>
@@ -292,7 +378,7 @@
                     </table>                       
                 </div>
                 <div class="center">
-                    <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
+                    <a href="#form-order1" class="btn btn_order">Сделать заказ</a>
                 </div>
             </div>
         </div>
@@ -328,7 +414,7 @@
                     <p class="sign">Признанная безопасность от Volvo: все автомобили оснащены электронными системами безопасности city safety</p>
                 </div>
                 <div class="center">
-                    <a href="#form-order" class="btn btn_order">Сделать заказ</a href="#form-order">
+                    <a href="#form-order1" class="btn btn_order">Сделать заказ</a>
                 </div>                
             </div>
         </div>
@@ -384,10 +470,10 @@
                 </div>
                 <div class="form">
                     <p>Здесь вы можете cделать заказ</p>
-                    <form action="#" method="POST" id="form-order">
-                        <input type="text" name = "name" placeholder="Введите имя" class="w3-input w3-border w3-round-large w3-margin-bottom">
-                        <input type="text" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom">
-                        <textarea name="review" id="" cols="30" rows="10" placeholder="Сообщение" class="w3-input w3-border w3-round-large w3-margin-bottom"></textarea>
+                    <form action="mail.php" method="POST" id="form-order1">
+                        <input type="text" name = "name" placeholder="Введите имя" class="w3-input w3-border w3-round-large w3-margin-bottom" required>
+                        <input type="tel" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom" title="В формате +375 (xx) xxx xx xx" required pattern="\d">
+                        <textarea name="review" cols="30" rows="10" placeholder="Сообщение" class="w3-input w3-border w3-round-large w3-margin-bottom"></textarea>
                         <button type="submit" class="btn">Заказать</button>
                     </form>
                 </div>

@@ -2,26 +2,101 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/style.css">
-    <title>Интеллектуальный трансфер в любую точку РБ</title>
+    <title>Ваш заказ принят!</title>
+
+    
+    <!-- Short description of the page (limit to 150 characters) -->
+    <!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
+    <meta name="description" content="A description of the page">
+    
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow,noodp"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    
+    <!-- Tells Google not to show the sitelinks search box -->
+    <meta name="google" content="nositelinkssearchbox">
+    
+    <!-- Tells Google not to provide a translation for this page -->
+    <meta name="google" content="notranslate">
+    
+    <!-- Verify ownership for Google Search Console -->
+    <meta name="google-site-verification" content="verification_token">
+    
+    <!-- Used to name software used to build the website (i.e. - Wordpress, Dreamweaver) -->
+    <meta name="generator" content="program">
+    
+    <!-- Short description of your site's subject -->
+    <meta name="subject" content="your website's subject">
+    
+    <!-- Very short sentence describing the purpose of the website -->
+    <meta name="abstract" content="your website's subject">
+    
+    <!-- Describes the topic of the website -->
+    <meta name="topic" content="">
+    
+    <!-- Brief summary of the company or purpose of the website -->
+    <meta name="summary" content="">
+    
+    <!-- A deprecated tag that does the same as the keywords meta tag -->
+    <meta name="classification" content="business">
+    
+    <!-- Full domain name or web address -->
+    <meta name="url" content="https://example.com/">
+    
+    <!-- Does the same as URL, older and not supported -->
+    <meta name="identifier-URL" content="https://example.com/">
+    
+    <meta name="directory" content="submission">
+    
+    <!-- Does the same function as the keywords tag -->
+    <meta name="category" content="">
+    
+    <!-- Makes sure your website shows up in all countries and languages -->
+    <meta name="coverage" content="Worldwide">
+    
+    <!-- Does the same as the coverage tag -->
+    <meta name="distribution" content="Global">
+    
+    <!-- Gives a general age rating based on sites content -->
+    <meta name="rating" content="General">
+    
+    <!-- Allows control over how referrer information is passed -->
+    <meta name="referrer" content="never">
+    
+    <!-- Disable automatic detection and formatting of possible phone numbers -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Geo tags -->
+    <meta name="ICBM" content="latitude, longitude">
+    <meta name="geo.position" content="latitude;longitude">
+    <meta name="geo.region" content="country[-state]"><!-- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY" -->
+    <meta name="geo.placename" content="city/town"><!-- eg. content="New York City" -->
 </head>
 <body>
     <header>
-        <div class="wrapper clearfix">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="">Туристическим агентам</a></li>
-                    <li><a href="">Контакты</a></li>
-                </ul>
+        <div class="wrapper w3-row">
+            <nav class="w3-col l9">
+                <div class="w3-bar">
+                    <a href="index.html" class="w3-bar-item w3-mobile">Главная</a>
+                    <a href="index.html#tourism" class="w3-bar-item w3-mobile">Туристическим агентам</a>
+                    <a href="index.html#rewiev" class="w3-bar-item w3-mobile">Отзывы</a>
+                    <a href="index.html#contacts" class="w3-bar-item w3-mobile">Контакты</a>
+                </div>
             </nav>
-            <div class="calling">
+            <div class="calling w3-col l3 w3-padding-16">
                 <a href="tel:+375333333333">+375(33)333-33-33</a><br>
-                <b>Заказать звонок</b>            
-            </div>
-            <button class="btn btn_nav">Войти</button>
+                <b>
+                    <a title="Viber" href="viber://add?number=375333333333">
+                        <img src="img/viber.svg" alt="Viber">Viber</a>
+                    <a title="WhatsApp" href="whatsapp://send?phone=+375333333333">
+                        <img src="img/whatsapp.svg" alt="WhatsApp">WhatsApp</a> 
+                    <a title="Telegram" href="tg://resolve?domain=nikname">
+                        <img src="img/telegram.svg" alt="Telegram">Telegram</a>
+                </b>            
+            </div>        
         </div>
     </header>
     <main>
@@ -34,9 +109,8 @@
                 </div>                
             </div>
         </div>
-
     </main>
-    <footer>
+    <footer id="contacts">
         <strong class="notes">Мы формируем новую культуру перемещения</strong>
         <div class="wrapper">            
             <section>
@@ -54,19 +128,45 @@
                     </p>
                 </div>
                 <div class="form">
-                    <p>Здесь вы можете оставить отзыв о нашем сервисе</p>
-                    <form action="#" method="POST">
-                        <input type="text" name = "name" placeholder="Введите имя">
-                        <input type="text" name = "phone" placeholder="Введите номер телефона">
-                        <textarea name="review" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-                        <button type="submit" class="btn">Оставить отзыв</button>
+                    <p>Здесь вы можете cделать заказ</p>
+                    <form action="mail.php" method="POST" id="form-order1">
+                        <input type="text" name = "name" placeholder="Введите имя" class="w3-input w3-border w3-round-large w3-margin-bottom">
+                        <input type="text" name = "phone" placeholder="Введите номер телефона" class="w3-input w3-border w3-round-large w3-margin-bottom">
+                        <textarea name="review" cols="30" rows="10" placeholder="Сообщение" class="w3-input w3-border w3-round-large w3-margin-bottom"></textarea>
+                        <button type="submit" class="btn">Заказать</button>
                     </form>
                 </div>
             </section>            
         </div>
         <div class="copyright gray">
-            <span>&copy;&nbsp;Copyright Qlab 2018</span>
+            <span>&copy;&nbsp;Copyright Qlab&nbsp;&nbsp;</span><?php echo date('Y')?>
         </div>
     </footer>
+    <script src="script/jquery-3.2.1.min.js"></script>
+    <script src="script/owl.carousel.min.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/mail.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.owl-carousel').owlCarousel({
+                loop:true,                                
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        margin:5,
+                        dots: true,
+                    },
+                    800:{
+                        items:2,
+                        nav:true,
+                        dots: false,
+                        margin:20,
+                        loop:false
+                    }
+                }
+            })
+        });
+    </script>
 </body>
 </html>
