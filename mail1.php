@@ -14,7 +14,7 @@ if (!empty($_POST['name']) AND !empty($_POST['phone']) AND !empty($_POST['review
     $letter .="\nОтзыв: ".$_POST['review'];
     
     if (mail("babskij2015@gmail.com", $theme, $letter, $headers)){
-      header("Location: thanks.html");
+      header("Location: thanks.php");
     } else {
       header("Location: /testform");
     }  

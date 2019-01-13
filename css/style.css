@@ -42,7 +42,7 @@ a{
 }
 
 
-/*------------*/
+/*------HAMBURGER------*/
 .visuallyHidden{
     position: absolute; 
     overflow: hidden; 
@@ -56,6 +56,7 @@ a{
     position: relative;
 }
 .hamburger {    
+    display: inline-block;
     margin-top: 10px;
     width: 30px;
     height: 30px;
@@ -212,6 +213,9 @@ header nav, .calling{
     background-image: url('../img/hours24.png');
     background-repeat: no-repeat;
     background-position: center;
+}
+.calling > a:first-child{
+      margin-right: 50px;
 }
 .calling img{
     width: 30px;
@@ -461,7 +465,7 @@ h3{
 .servises_list_item:last-child{
     background-image: url("../img/icon_info.png");
 }
-.servises_list_item p{
+.servises_list_item li{
     text-align: left;
 }
 .our_cars{
@@ -473,48 +477,70 @@ h3{
 }
 /*tabs*/
 /* Style the tab */
-.tab {
+.tab{
     overflow: hidden;
-    width: 316px;
+    /* width: 470px; */
     box-sizing: border-box;
     position: relative;
     top: -5px;
   }
+.tariff-tab {
+    text-align: center;
+    margin-bottom: 35px;
+}
   
   /* Style the buttons that are used to open the tab content */
-  .tab button {
+  .tab button, .tariff-tab button {
     background-color: inherit;
-    width: 50%;
+    /* width: 33.3333%; */
     float: left;
     border: none;
     outline: none;
     cursor: pointer;
-    padding: 5px 16px 2px;
+    padding: 5px 10px 2px;
     transition: 0.3s;
     font: 25px ProximaNovaLt, Arial, sans-serif;
     color: #a0a2a3;
     border: 3px solid transparent;
   }
+  .tariff-tab button {
+    padding: 5px 10px;
+    color: #111;
+    float: none;
+    font-family: ProximaNova; 
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+    border-style: dashed;
+}
   
   /* Change background color of buttons on hover */
-  .tab button:hover {
-    border-left: 3px solid #f87f01;
-    border-right: 3px solid #f87f01;
-    border-bottom: 3px solid #f87f01;
+  .tab button:hover, .tariff-tab button:hover{
+    border-left-color: #f87f01;
+    border-right-color: #f87f01;
+    border-bottom-color: #f87f01;
     color: #f87f01;
+  }
+  .tariff-tab button:hover{
+    border: 3px solid #f87f01;
+    color: #f87f01;;
   }
   
   /* Create an active/current tablink class */
-  .tab button.active {
-    border-left: 3px solid #f87f01;
-    border-right: 3px solid #f87f01;
-    border-bottom: 3px solid #f87f01;
-    color: #f87f01;
-  }
-  
+    .tab button.active {
+        border-left-color: #f87f01;
+        border-right-color: #f87f01;
+        border-bottom-color: #f87f01;
+        color: #f87f01;
+    }
+    .tariff-tablinks.active{
+        border: 3px solid #f87f01;
+        color: #f87f01;;
+    }
   /* Style the tab content */
 .tabcontent {
     display: none;
+    justify-content: space-between;
     border-top: none;
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
   }
@@ -528,8 +554,8 @@ h3{
     color: #f4f4f4;
     padding: 130px 5px 0;
 }
-.slider_vaz, .slider_volvo{
-     max-width: 711px;
+.slider_vaz, .slider_volvo, .slider_prem{
+     max-width: 650px;
 }
 .cars_select span{
     box-sizing: border-box;
@@ -538,7 +564,7 @@ h3{
     line-height: 29px;
     text-transform: uppercase;
     text-align: center;
-    width: 316px;
+    width: 365px;
     background-color: #f87f01;
   }
 
@@ -630,7 +656,9 @@ h3{
     
 }
 .tariffs table{
-    width: 45%;
+    width: 48%;
+}
+.tariffs td{
 }
 .tariffs table:first-child{
     float: left;
@@ -649,15 +677,34 @@ h3{
 .tariffs table tr>td:first-child{
     font: 16px ProximaNova, Arial, sans-serif;
 }
+.tariffs table:first-child tr:first-child>td:first-child{
+    width: 30%;
+}
+.tariffs table tr:first-child>td:last-child{
+    /* width: 70%; */
+}
 .tariffs table tr>td:last-child{
     font: 16px ProximaNovaBd, Arial, sans-serif;
     text-align: right;
-    width: 100px;
+    width: 70px;
 }
 .tariffs_list{
     margin-bottom: 75px;
 }
-
+.tariffs.white td.incl{
+    text-align: left;
+    font: 16px ProximaNova, Arial, sans-serif;
+}
+.incl ul{
+    list-style-type: square;
+    list-style-position: inside;
+}
+.padding{
+    padding-top: 20px;
+}
+caption{
+    background-color: #f87f01;
+}
 
 .passenger_care{    
     padding: 80px 0;
@@ -780,6 +827,9 @@ footer section{
 .site_logo_f{
     text-align: center;
 }
+.site_logo_f img{
+    width: 260px;
+}
 .site_logo_f em{
     display: block;
     text-transform: none;
@@ -810,10 +860,10 @@ footer h3{
     padding-left: 40px;
 }
 .info a[href^="tel"]{
-    background-image: url("../img/email_insurance.png");
+    background-image: url("../img/phone.png");
 }
 .info a[href^="mailto"]{
-    background-image: url("../img/phone.png")
+    background-image: url("../img/email_insurance.png");
 }
 
 .form  p{
@@ -888,7 +938,7 @@ input[type="text"], textarea{
         .center_our_cars{
             text-align: center;
         }
-   
+            
     .tabcontent{
         -webkit-flex-direction: column;
         -moz-flex-direction: column;
@@ -902,9 +952,21 @@ input[type="text"], textarea{
             position: relative;
             text-align: center;
         }
+        .cars_select span{
+            display: block;
+            margin: auto; 
+            width: auto;
+            max-width: 470px;
+        }
         .tab{
             margin: auto;
+            width: auto;
+            max-width: 470px;
+            display: block;
         }
+            .tab button {
+                width: 33.333%;    
+            }
         .tabcontent_comments{
             padding-top: 50px;
         }
@@ -913,6 +975,12 @@ input[type="text"], textarea{
 
 
 @media screen and (max-width: 550px){
+    .calling > a:first-child{
+        margin-right: 0px;
+        display: block;
+        width: 176px;
+        margin: 0 auto 10px;
+    }
     .tariffs table{
         width: 100%;
     }
@@ -947,18 +1015,28 @@ input[type="text"], textarea{
             .servises_list_item p{
                 text-align: center;
             }
+    .tab button{
+        font-size: 18px;
+    }
 }
 
 
 @media screen and (max-width: 420px){
     header{
         padding-top: 0;
+        /* background-color: #465359; */
     }    
     header nav{
         position: relative;
     }
+    .hamburger .bar{
+        /* background-color: #fff; */
+    }
+    .calling>a::before{
+        background-image: url("../img/hours24_420.png");
+    }
     .calling>a{
-  
+        /* color: #fff; */
     }
 
     #menu_toggle{
@@ -1015,7 +1093,7 @@ input[type="text"], textarea{
         font-size: 5vw;
     }
     #menu_toggle+div.w3-bar{
-        background-color: rgba(240, 240, 255, 0.9); 
+        background-color: rgba(225, 235, 215, 0.9); 
         display: none;/**/
         padding-left: 0;
         padding-right: 0;

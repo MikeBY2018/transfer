@@ -1,7 +1,7 @@
 <?php 
 if (!empty($_POST['from']) AND !empty($_POST['to']) AND !empty($_POST['phone'])) 
 {
-    $headers = 'From: Войтов Руслан\r\n' .
+    $headers = 'From: Войтов Руслан' .
                 'Reply-To: rvgroupby@gmail.com\r\n' .
                 'X-Mailer: PHP/' . phpversion();
          
@@ -15,11 +15,11 @@ if (!empty($_POST['from']) AND !empty($_POST['to']) AND !empty($_POST['phone']))
     $letter .="\nВыбор тарифа: ".$_POST['options'];
     
     if (mail("babskij2015@gmail.com", $theme, $letter, $headers)){
-      header("Location: thanks.html");
+      header("Location: thanks.php");
     } else {
-      header("Location: /");
+      header("Location: /testform");
     }  
               
 } else {
-  header("Location: /");
+  header("Location: /testform");
 }
